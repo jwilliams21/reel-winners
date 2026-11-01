@@ -1,12 +1,16 @@
-
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import Layout from './layouts/Layout';
+import Home from './components/Home';
 
 function App() {
-  
-
   return (
-    <div>
-      <h1>Reel Winners</h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+        </Route>
+      </Routes>
+    </Router>
   )
 }
 
